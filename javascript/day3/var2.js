@@ -7,7 +7,7 @@ console.log(`Global Scope a:${a} b:${b} c:${c}`);
 function variable()
 {
       var a=100;
-      let b=200;
+      let b=250;
       const c=300;
       console.log(`Local Scope a:${a} b:${b} c:${c}`);
 
