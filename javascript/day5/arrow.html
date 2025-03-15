@@ -1,0 +1,23 @@
+<script>
+    console.log('global',this);
+    let user={
+        fristName:'Sindhu',
+        lastName:'M',
+        fullName1:function()
+        {//this pointing to user object 
+            console.log(this.firstName,this.lastName);
+        },
+        fullName2:()=>
+        { //this = window
+            console.log(this.firstName,this.lastName);
+        },
+        sayHello:()=>
+        {
+           console.log('hi');
+        }
+    }
+        user.fullName1();//Sindhu M
+        user.fullName2();// undefined
+
+    
+</script>

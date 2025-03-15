@@ -1,0 +1,26 @@
+<script>
+    let obj = {
+        a: 10,
+        b: 20,
+        f1: function () { 
+            console.log('inside f1 a & b are: ', this.a, this.b); 
+
+            function f2() {
+                console.log('inside f2: ', this); 
+                //console.log('inside f2: ', obj.a, obj.b); 
+            }
+            f2(); 
+
+            let f3 = () => { 
+                console.log('inside f3: ', this); 
+
+                let f4 = () => {
+                    console.log('inside f4: ', this); 
+                }
+                f4();
+            }
+            f3();
+        }
+    }
+    obj.f1();
+</script>

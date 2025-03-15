@@ -1,0 +1,25 @@
+<script>
+    console.log('a ::',a);//works--initialization works
+   // console.log('b ::',b);//throws error--will be there in memory but no initialization so doesnt execute
+    //console.log('c ::',c);//throws error
+    var a= 10;
+    let b=20;
+    const c=30;
+
+    console.log('a ::',a);
+    console.log('b ::',b);
+    console.log('c ::',c);
+
+    function demo()
+    {
+        console.log(aa);
+        //console.log(bb);
+        //console.log(cc);
+        var aa=100;
+        var bb=200;
+        var cc=300;
+        console.log(aa,bb,cc);
+        }
+    
+demo();
+</script>
