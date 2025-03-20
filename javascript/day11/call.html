@@ -1,0 +1,11 @@
+<script>
+    function add(a,b)
+    {
+        console.log(this.num+a+b);
+    }
+    add(2,3);//NaN
+    let obj1={num:4};//9
+    add.call(obj1,2,3);// call add fun and inside add fun this value should point to obj1
+    let obj2={num:5};//10
+    add.call(obj2,2,3);//
+</script>

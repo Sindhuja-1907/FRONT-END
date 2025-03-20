@@ -1,0 +1,17 @@
+<script>
+    class Student
+    {
+        firstName ="Sindhu";
+        lastName="Mylavarapu";
+        fullName()
+        {
+            console.log(this.firstName,this.lastName);
+        }
+        }
+    let std= new Student();
+    std.fullName();
+    setTimeout(std.fullName,2000);//undefined
+    let fullNameWithThisSetToStd= std.fullName.bind(std);
+    setTimeout(fullNameWithThisSetToSt.fullName,2000);//Sindhu Mylavarapu
+
+</script>

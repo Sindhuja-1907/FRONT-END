@@ -1,0 +1,22 @@
+function getPermutations(str) {
+  if (str.length === 1) return [str];
+  const permutations = [];
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    const remainingChars = str.slice(0, i) + str.slice(i + 1);
+    const remainingPermutations = getPermutations(remainingChars);
+    for (const perm of remainingPermutations) {
+      permutations.push(char + perm);
+    }
+  }
+  return permutations;
+}
+
+// Example usage:
+const input = prompt('Enter a 3-letter word:');
+if (input.length === 3) {
+  const perms = getPermutations(input.toUpperCase());
+  console.log('Permutations:', perms.join(', '));
+} else {
+  console.log('Please enter exactly 3 letters.');
+}

@@ -1,0 +1,34 @@
+<script>
+    /*let account={accNo:12345,accBal:500}
+    console.log(account.accNo,account.accBal);
+    account.accBal= -5000;
+    console.log(account.accNo,account.accBal);*/
+
+    function openAccount(initialBal)
+    {
+      let accNo = 11112223334455;
+      let accBal=initialBal;
+      return{
+        displayInfo:function()
+        {
+            console.log(accNo,accBal)
+        },
+        deposit: function(amt)
+        {
+            if(amt<0)
+        {
+            alert("Boss,no need keep with u");
+
+        }else{
+            accBal=accBal+amt;
+        }
+      }
+    }
+}
+    let encapsulatedAccount= openAccount(3000);
+    console.log(encapsulatedAccount);
+    encapsulatedAccount.displayInfo();
+   // encapsulatedAccount.displayInfo(-1440);
+    enscapsulatedAccount.displayInfo();
+    console.dir()
+</script>
